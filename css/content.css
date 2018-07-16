@@ -1,0 +1,241 @@
+.cards {
+    height: 500px;
+    margin: 30px auto;
+}
+
+.card {
+    border-radius: 25px;
+    box-shadow: -5px 5px 1px rgba(0, 0, 0, 0.3);	
+}
+
+.card-head {
+    position: relative;
+    height: 252px;
+    background: #fff2f2;
+    /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #fff2f2 8%, #ffeaeb 83%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #fff2f2 8%, #ffeaeb 83%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #fff2f2 8%, #ffeaeb 83%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#fff2f2', endColorstr='#ffeaeb', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+    border-radius: 25px 25px 0 0;
+
+}
+
+
+.thumbnail {
+    position: absolute;
+    left: 0;
+    margin-top: 16px;
+    margin-left: 30px;  
+}
+
+
+img {
+    mix-blend-mode: multiply;
+    width: 230px;
+    height: 230px;
+}
+
+
+.card-body {
+	height: 240px;
+    background: #fff;
+    border-radius: 0 0 25px 25px;
+}
+
+.product-title {
+    padding: 20px 20px 5px 20px;
+    display: block;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    height: 120px;
+  }
+
+  .product-brand {
+    display: block;
+    padding: 0 20px;
+    font-size: 10px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .card-body a {
+      text-decoration: none;
+  }
+
+  .badge {
+    position: relative;
+    font-size: 10px;
+    font-weight: 300;
+    color: #fff;
+    background: #7889ba;
+    padding: 2px 5px;
+    border-radius: 4px;
+    top: -2px;
+    margin-left: 5px;
+  }
+
+  .product-price {
+    position: absolute;
+    background: #ff736c;
+    padding: 7px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 200;
+    color: #fff;
+    border-radius: 7px;
+    margin-top: 1%;
+    margin-left: 1px;
+    box-shadow: -5px 10px 15px -10px #ff3333;
+  }
+
+  .product-price b {
+    margin-left: 5px;
+  }
+
+  .product-cart {
+    position: absolute;
+    background: #ff736c;
+    padding: 5px 10px;
+    text-align: center;
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 200;
+    color: #fff;
+    border-radius: 12px;
+    margin-top: 1%;
+    margin-left: 65%;
+    cursor: pointer;
+  }
+
+  .shopping-cart {
+    display: none;
+  }
+
+  /* shopping cart styling */
+  .cart-list {
+      list-style-type: none;
+      width: 500px;
+      margin: 10px;
+  }
+
+ .cart-list > h3 {
+    font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
+  }
+   
+ .cart-list > li > img {
+    float: left;
+    margin: 0 15px 0 0;
+  }
+   
+ .cart-list > li > p {
+    font: 200 12px/1.5 Georgia, Times New Roman, serif;
+  }
+
+  .cart-list > li > span {
+      cursor: pointer;
+      position: absolute;
+      background: #ff736c;
+      padding: 7px 20px;
+      text-align: center;
+      display: inline-block;
+      font-size: 24px;
+      font-weight: 200;
+      color: #fff;
+      border-radius: 7px;
+      margin-top: 1%;
+      margin-left: 1px;
+      box-shadow: -5px 10px 15px -10px #ff3333;
+  }
+   
+ .cart-list > li {
+    padding: 10px;
+    overflow: auto;
+    margin-bottom: 5px;
+    background: #fff2f2;
+  }
+   
+ 
+/* Flexbox stuff */
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+ }
+
+.card {
+    box-sizing: border-box;
+    margin: 1rem .45em;
+}
+
+@media screen and (min-width: 40em) {
+    .card {
+       max-width: calc(50% -  1em);
+    }
+
+    .thumbnail {
+        position: absolute;
+        left: 0;
+        margin-top: 16px;
+        margin-left: 56px;  
+    }
+
+    
+
+    .product-cart {
+        margin-left: 35%;
+    }
+}
+
+@media screen and (min-width: 60em) {
+    .card {
+        max-width: calc(25% - 1em);
+    }
+
+    .card-body {
+        height: 260px;
+    }
+
+    .card-head {
+        height: 230px;
+    }
+
+    .thumbnail {
+        position: absolute;
+        left: 0;
+        margin-top: 16px;
+        margin-left: 30px;  
+    }
+    img {
+        width: 175px;
+        height: 175px;
+    }
+
+    .product-title {
+        height: 150px;
+    }
+
+    .product-cart {
+        margin-left: 15%;
+    }
+}
+
+.centered {
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+@media screen and (min-width: 52em) {
+    .centered {
+        max-width: 72em;
+    }
+    
+}

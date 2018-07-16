@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shopping-app</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/content.css">
+    
+
+    <!-- Internet Explorer HTML5 enabling script: -->
+
+    <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <style type="text/css">
+
+                .clear {
+                    zoom: 1;
+                    display: block;
+                }
+
+            </style>
+
+        <![endif]-->
+</head>
+
+<body>
+    <!-- header section starts -->
+    <header>
+        <div class="logo">
+            <h1>Products</h1>
+        </div>
+        <div class="btn">
+            <button class="btn-sort filter dropdown">
+                <a class="dropdown-btn">
+                    <i class="material-icons">
+                        toc
+                    </i>
+                </a>
+                <div class="dropdown-menu">
+                    <a href="#" data-name="price">Price</a>
+                    <a href="#" data-name="caption">Title</a>
+                    <a href="#" data-name="brand">Brand</a>
+                    <!-- <a href="#" data-name="Availability">Availability</a> -->
+                </div>
+            </button>
+            <button class="btn-cart">
+                <i class="material-icons">
+                    shopping_cart
+                </i>
+                <span id="totalItems" class="totalItems">0</span>
+            </button>
+        </div>
+    </header>
+    <!-- header section ends -->
+    <!-- main content -->
+    <main class="main-area">
+        <div class="centered">
+            <section id="products" class="cards">
+                    
+            </section>
+            
+            <script id="list-container" type="text/x-handlebars-template">
+                {{#each this}}
+                    <article class="card container">
+                        <div class="card-head">
+                            <picture class="thumbnail">
+                                <img src="{{mediumImageURL}}" srcset="{{imageURL}} 1000w" alt="{{caption}}">
+                            </picture>
+                        </div>
+                        
+                        <div class="card-body">
+                            <div class="product-desc">
+                                <span class="product-title">
+                                    {{caption}}
+                                </span>
+                                <span class="product-brand">
+                                    {{brand}} 
+                                    <a href="{{productUrl}}" target="_blank"><span class="badge">
+                                        View
+                                    </span></a>
+                                    
+                                </span>
+                                
+                                <span class="product-price">
+                                    {{currency}}<b>{{price}}</b>
+                                </span>
+                                <span title="Add To Cart" 
+                                        data-id="{{prodId}}" 
+                                        data-name="{{caption}}" 
+                                        data-image="{{mediumImageURL}}"
+                                        class="product-cart">+</span>
+                            </div>
+                        </div>
+                    </article>
+                {{/each}}
+            </script>
+        </div>
+    </main>
+    <!-- main content ends -->
+    <!-- Shopping Cart -->
+    <section class="shopping-cart centered">
+        <h1>shopping-cart</h1>
+        <div id="cart">
+            
+        </div>
+    </section>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
+    <script src="js/products.js"></script>
+</body>
+
+</html>
